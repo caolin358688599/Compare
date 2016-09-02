@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "RootTableViewController.h"
 
 @interface AppDelegate ()
+
 
 @end
 
@@ -17,6 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    RootTableViewController *root = [[RootTableViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:root];
+    self.window.rootViewController = nav;
+    
+    
     return YES;
 }
 
